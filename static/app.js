@@ -8,4 +8,24 @@ $(document).ready(function() {
   .then(function (resp) {
     document.querySelectorAll('#api2')[0].innerHTML = JSON.stringify(resp);
   });
+
+  $("#create_user").on('click', function () {
+    $.ajax({
+      dataType: "json",
+      url: GLOBAL_API_ADDR + '/user/save?name=' + $('#create_user_name').val() + '&email=' + $('#create_user_email').val()
+    })
+    .then(function (resp) {
+      document.querySelectorAll('#create-user-response')[0].innerHTML = JSON.stringify(resp);
+    });
+  });
+
+  $("#get_user").on('click', function () {
+    $.ajax({
+      dataType: "json",
+      url: GLOBAL_API_ADDR + '/user/get-by-email?email=' + $('#get_user_email').val()
+    })
+    .then(function (resp) {
+      document.querySelectorAll('#get-user-response')[0].innerHTML = JSON.stringify(resp);
+    });
+  });
 });

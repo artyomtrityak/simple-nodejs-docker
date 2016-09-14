@@ -8,6 +8,7 @@
     <script type="text/javascript">
       var GLOBAL_SERVICE_URL1 = "<%= SERVICE_URL1 %>";
       var GLOBAL_SERVICE_URL2 = "<%= SERVICE_URL2 %>";
+      var GLOBAL_API_ADDR = "<%= API_ADDR %>";
     </script>
 
 </head>
@@ -20,6 +21,21 @@
 
   <h3>API 2</h3>
   <div id="api2"></div>
+
+  <h3>Create user</h3>
+  <div>
+    <input type="text" placeholder="email" name="email" id="create_user_email">
+    <input type="text" placeholder="name" name="name" id="create_user_name">
+    <input type="submit" id="create_user">
+  </div>
+  <div id="create-user-response"></div>
+
+  <h3>Get user</h3>
+  <div>
+    <input type="text" placeholder="email" name="email" id="get_user_email">
+    <input type="submit" id="get_user">
+  </div>
+  <div id="get-user-response"></div>
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <script type="text/javascript" src="app.js"></script>

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "server.js",
   "scripts": {
-    "start": "SERVICE_URL1=https://jsonplaceholder.typicode.com/posts/1 SERVICE_URL2=https://jsonplaceholder.typicode.com/posts/1 node server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

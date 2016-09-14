@@ -1,7 +1,9 @@
 # Set up Node.js app server
 FROM node:latest
 
-WORKDIR /usr/src/demo/
+RUN mkdir -p /usr/src/demoapp/
+WORKDIR /usr/src/demoapp/
+COPY . /usr/src/demoapp/
 
 EXPOSE 5000
 

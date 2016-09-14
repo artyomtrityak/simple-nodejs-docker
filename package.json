@@ -1,0 +1,25 @@
+{
+  "name": "simple-nodejs-docker",
+  "version": "0.1.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node_modules/nodemon/bin/nodemon.js -L --debug server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artyomtrityak/simple-nodejs-docker.git"
+  },
+  "keywords": [
+    "docker",
+    "nodejs"
+  ],
+  "author": "Artyom Trityak <art.trityak@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/artyomtrityak/graphql-relay-docker-node/issues"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "nodemon": "^1.9.1"
+  }
+}

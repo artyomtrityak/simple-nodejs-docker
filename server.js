@@ -5,7 +5,10 @@ app.set('view engine', 'ejs');
 app.use(express.static('static'));
 
 app.get('/', function(req, res) {
-  res.render('index', {SERVICE_URL: process.env.SERVICE_URL});
+  res.render('index', {
+    SERVICE_URL1: process.env.SERVICE_URL1,
+    SERVICE_URL2: process.env.SERVICE_URL2
+  });
 });
 
 app.listen(5000, function () {

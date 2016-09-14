@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "server.js",
   "scripts": {
-    "start": "node_modules/nodemon/bin/nodemon.js -L --debug server.js"
+    "start": "SERVICE_URL=http://my.url node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
     "url": "https://github.com/artyomtrityak/graphql-relay-docker-node/issues"
   },
   "dependencies": {
+    "ejs": "^2.5.2",
     "express": "^4.13.4",
     "nodemon": "^1.9.1"
   }

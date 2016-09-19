@@ -1,8 +1,18 @@
-const express = require('express');
+const express = require('express'),
+      request = require('request');
 
 const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static('static'));
+
+app.use('/proxy', function(req, res) {
+  request(req.query.url, (error, response, body) => {
+    if (error) {
+      return console.error(error);
+    }
+    res.json(body);
+  });
+});
 
 app.get('/', function(req, res) {
   res.render('index', {

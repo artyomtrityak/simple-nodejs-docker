@@ -21,6 +21,7 @@
   "dependencies": {
     "ejs": "^2.5.2",
     "express": "^4.13.4",
-    "nodemon": "^1.9.1"
+    "nodemon": "^1.9.1",
+    "request": "^2.75.0"
   }
 }

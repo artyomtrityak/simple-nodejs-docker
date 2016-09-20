@@ -12,7 +12,10 @@ $(document).ready(function() {
   $("#create_user").on('click', function () {
     $.ajax({
       dataType: "json",
-      url: '/proxy?url=' + GLOBAL_API_ADDR + '/user/save?name=' + $('#create_user_name').val() + '&email=' + $('#create_user_email').val()
+      data: {
+        url: GLOBAL_API_ADDR + 'user/save?name=' + $('#create_user_name').val() + '&email=' + $('#create_user_email').val()
+      },
+      url: '/proxy'
     })
     .then(function (resp) {
       document.querySelectorAll('#create-user-response')[0].innerHTML = JSON.stringify(resp);

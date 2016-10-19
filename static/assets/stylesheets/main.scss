@@ -1,0 +1,19 @@
+@import "_bootstrap";
+
+body {
+	background: #f7f7f9;
+}
+
+.slider-img {
+	width: 100%;
+}
+
+.nav-pills-right {
+	li {
+		float: right;
+	}
+}
+
+.carousel-control .fixed-offset-top {
+	top: 300px;
+}

@@ -15,11 +15,17 @@ app.use('/proxy', function(req, res) {
 });
 
 app.get('/', function(req, res) {
-  res.render('index', {
-    SERVICE_URL1: process.env.SERVICE_URL1,
-    SERVICE_URL2: process.env.SERVICE_URL2,
-    API_ADDR: process.env.API_ADDR
+  request('http://localhost:8070/motorcycle', (error, response, body) => {
+    if (error) {
+      return console.error(error);
+    }
+
+    res.render('index', {motorcycles: JSON.parse(body)});
   });
+});
+
+app.use(function(req, res) {
+    res.status(404).send('Sorry! Page not found!');
 });
 
 app.listen(5000, function () {

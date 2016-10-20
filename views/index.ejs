@@ -57,117 +57,57 @@
 	  		<div class="row">
   				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 					  <div class="carousel-inner" role="listbox">
-					    <div class="item active">
-					    	<div class="col-md-offset-1 col-md-6" style="margin-top: 20px;">
-					      	<img src="assets/images/kawasaki.jpg" alt="kawasaki" class="img-thumbnail slider-img">
-					    	</div> 
-					    	<div class="col-md-4">
-					    		<h1 class="text-right">Kawasaki</h1>
-					    		<table class="table table-bordered">
-									  <tr>
-									  	<td>Model</td>
-									  	<td>Concours</td>
-									  </tr>
-									  <tr>
-									  	<td>Year</td>
-									  	<td>2011</td>
-									  </tr>
-									  <tr>
-									  	<td>Asking Price</td>
-									  	<td>$8500</td>
-									  </tr>
-									  <tr>
-									  	<td>Mileage</td>
-									  	<td>5,345 miles</td>
-									  </tr>
-									  <tr>
-									  	<td>Engile type</td>
-									  	<td>DONC inline -4</td>
-									  </tr>
-									  <tr>
-									  	<td>Displacement</td>
-									  	<td>1352cc</td>
-									  </tr>
-									  <tr>
-									  	<td>Transmission Speed</td>
-									  	<td>6</td>
-									  </tr>
-									  <tr>
-									  	<td>Final Drive</td>
-									  	<td>Shaft</td>
-									  </tr>
-									  <tr>
-									  	<td>Fuel Capacity</td>
-									  	<td>5.8 gal.</td>
-									  </tr>
-									  <tr>
-									  	<td>Curb weigth</td>
-									  	<td>593 lb</td>
-									  </tr>
-									</table>
-									<p>
-										<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur officiis odio alias quod totam, aliquid dolore quis vero repudiandae eos quibusdam, atque commodi aut at ducimus provident veniam architecto nulla.</span>
-										<span>A velit aliquam itaque fuga accusantium harum aspernatur voluptatum neque nobis accusamus, ab odit molestias magni ipsa praesentium impedit quam incidunt, eos facere, amet debitis autem ad exercitationem quia. Quod.</span>
-										<span>Corporis possimus dolorum mollitia perspiciatis, unde expedita dolorem! Cum maiores dolore, mollitia voluptatibus autem culpa.</span>
-									</p>
+					  	<% motorcycles.forEach(function(motorcycle, index) { %>
+					  		<div class="item <%if (index === 1) { %> active <% } %>">
+						    	<div class="col-md-offset-1 col-md-6" style="margin-top: 20px;">
+						    		<img class="img-thumbnail slider-img" src="<%= motorcycle.photo %>" />
+						    	</div>
+						    	<div class="col-md-4">
+						    		<h1 class="text-right"><%= motorcycle.brand %></h1>
+						    		<table class="table table-bordered">
+										  <tr>
+										  	<td>Model</td>
+										  	<td><%= motorcycle.model %></td>
+										  </tr>
+										  <tr>
+										  	<td>Year</td>
+										  	<td><%= motorcycle.year %></td>
+										  </tr>
+										  <tr>
+										  	<td>Mileage</td>
+										  	<td><%= motorcycle.mileage %> miles</td>
+										  </tr>
+										  <tr>
+										  	<td>Engile type</td>
+										  	<td><%= motorcycle.engineType %></td>
+										  </tr>
+										  <tr>
+										  	<td>Displacement</td>
+										  	<td><%= motorcycle.displacement %>cc</td>
+										  </tr>
+										  <tr>
+										  	<td>Transmission Speed</td>
+										  	<td><%= motorcycle.transmissionSpeed %></td>
+										  </tr>
+										  <tr>
+										  	<td>Final Drive</td>
+										  	<td><%= motorcycle.finalDrive %></td>
+										  </tr>
+										  <tr>
+										  	<td>Fuel Capacity</td>
+										  	<td><%= motorcycle.fuelCapacity %> gal.</td>
+										  </tr>
+										  <tr>
+										  	<td>Curb weigth</td>
+										  	<td><%= motorcycle.curbWeight %> lb</td>
+										  </tr>
+										</table>
+										<p>
+											<%= motorcycle.description %>
+										</p>
+						    	</div>
 					    	</div>
-					    </div>
-					    <div class="item">
-					    	<div class="col-md-1"></div>
-					    	<div class="col-md-6" style="margin-top: 20px;">
-					      	<img src="assets/images/ducati.jpg" alt="ducati" class="img-thumbnail slider-img">
-					    	</div> 
-								<div class="col-md-4">
-					    		<h1 class="text-right">Ducati</h1>
-					    		<table class="table table-bordered">
-									  <tr>
-									  	<td>Model</td>
-									  	<td>Concours</td>
-									  </tr>
-									  <tr>
-									  	<td>Year</td>
-									  	<td>2011</td>
-									  </tr>
-									  <tr>
-									  	<td>Asking Price</td>
-									  	<td>$8500</td>
-									  </tr>
-									  <tr>
-									  	<td>Mileage</td>
-									  	<td>5,345 miles</td>
-									  </tr>
-									  <tr>
-									  	<td>Engile type</td>
-									  	<td>DONC inline -4</td>
-									  </tr>
-									  <tr>
-									  	<td>Displacement</td>
-									  	<td>1352cc</td>
-									  </tr>
-									  <tr>
-									  	<td>Transmission Speed</td>
-									  	<td>6</td>
-									  </tr>
-									  <tr>
-									  	<td>Final Drive</td>
-									  	<td>Shaft</td>
-									  </tr>
-									  <tr>
-									  	<td>Fuel Capacity</td>
-									  	<td>5.8 gal.</td>
-									  </tr>
-									  <tr>
-									  	<td>Curb weigth</td>
-									  	<td>593 lb</td>
-									  </tr>
-									</table>
-									<p>
-										<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur officiis odio alias quod totam, aliquid dolore quis vero repudiandae eos quibusdam, atque commodi aut at ducimus provident veniam architecto nulla.</span>
-										<span>A velit aliquam itaque fuga accusantium harum aspernatur voluptatum neque nobis accusamus, ab odit molestias magni ipsa praesentium impedit quam incidunt, eos facere, amet debitis autem ad exercitationem quia. Quod.</span>
-										<span>Corporis possimus dolorum mollitia perspiciatis, unde expedita dolorem! Cum maiores dolore, mollitia voluptatibus autem culpa repellendus quo alias.</span>
-									</p>
-					    	</div>
-						  </div>
+		  				<% }); %>
 
 						  <!-- Controls -->
 						  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">

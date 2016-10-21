@@ -15,7 +15,8 @@ app.use('/proxy', function(req, res) {
 });
 
 app.get('/', function(req, res) {
-  request('http://localhost:8070/motorcycle', (error, response, body) => {
+  request('http://'+ process.env.SERVICE_URL +':' + process.env.SERVICE_PORT + '/motorcycle/find-by-type?type=Sport%20touring',
+    (error, response, body) => {
     if (error) {
       return console.error(error);
     }
@@ -25,7 +26,7 @@ app.get('/', function(req, res) {
 });
 
 app.use(function(req, res) {
-    res.status(404).send('Sorry! Page not found!');
+  res.status(404).send('Page not found');
 });
 
 app.listen(5000, function () {

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "SERVICE_URL=10.1.216.232 SERVICE_PORT=8070 node server.js"
   },
   "repository": {
     "type": "git",

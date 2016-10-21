@@ -13,7 +13,7 @@ $(document).ready(function() {
     $.ajax({
       dataType: "json",
       data: {
-        url: GLOBAL_API_ADDR + 'user/save?name=' + $('#create_user_name').val() + '&email=' + $('#create_user_email').val()
+        url: GLOBAL_API_ADDR + '/user/save?name=' + $('#create_user_name').val() + '&email=' + $('#create_user_email').val()
       },
       url: '/proxy'
     })

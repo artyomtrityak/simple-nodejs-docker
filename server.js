@@ -6,7 +6,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('static'));
 
 app.use('/proxy', function(req, res) {
-  request(req.query.url, (error, response, body) => {
+  request(req.query.url, function(error, response, body) {
     if (error) {
       return console.error(error);
     }
@@ -15,8 +15,7 @@ app.use('/proxy', function(req, res) {
 });
 
 app.get('/', function(req, res) {
-  request('http://'+ process.env.SERVICE_URL +':' + process.env.SERVICE_PORT + '/motorcycle/find-by-type?type=Sport%20touring',
-    (error, response, body) => {
+  request('http://'+ process.env.SERVICE_URL +':' + process.env.SERVICE_PORT + '/motorcycle/find-by-type?type=Sport%20touring', function (error, response, body) {
     if (error) {
       return console.error(error);
     }

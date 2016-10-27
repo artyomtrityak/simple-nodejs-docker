@@ -19,6 +19,8 @@
     > a {
       position: relative;
       display: block;
+      color: #000;
+      font-size: 18px;
       padding: $nav-link-padding;
       &:hover,
       &:focus {

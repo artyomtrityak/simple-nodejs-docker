@@ -1,7 +1,55 @@
 @import "_bootstrap";
 
+html {
+	min-height: 100%;
+}
+
 body {
-	background: #f7f7f9;
+	background: #fff;
+  background: linear-gradient(to bottom, #a6daff, #fff 52%);
+}
+
+.model-title {
+	margin: 30px 0 25px;
+}
+
+.pseudo-search {
+	height: 45px;
+	line-height: 25px;
+	padding: 10px 0 10px 20px;
+	font-size: 18px;
+}
+
+.no-padding {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.carousel-inner .flex-container {
+	display: flex; 
+	@media screen and (max-width: $screen-sm-max) {
+		display: block;
+	}
+}
+
+.flex-item {
+	flex: 1;
+}
+
+.table-col {
+	width: 410px;
+	margin-right: 90px;
+	@media screen and (max-width: $screen-sm-max) {
+		width: 100%;
+	}
+}
+
+.font-size-18 {
+	font-size: 18px;
+}
+
+.font-size-36 {
+	font-size: 36px;
 }
 
 .slider-img {
@@ -15,5 +63,23 @@ body {
 }
 
 .carousel-control .fixed-offset-top {
-	top: 300px;
+	top: 25px;
+	position: absolute;
+	width: 26px;
+	height: 50px;
+	left: 0;
+	&.right-control {
+		right: 0;
+		left: auto;
+	}
+}
+
+.logo-img {
+	max-width: 460px;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.cell-blue {
+	color: #5197cc;
 }

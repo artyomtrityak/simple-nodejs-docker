@@ -12,8 +12,8 @@
   vertical-align: middle;
   border-top:   $caret-width-base dashed;
   border-top:   $caret-width-base solid \9; // IE8
-  border-right: $caret-width-base solid transparent;
-  border-left:  $caret-width-base solid transparent;
+  border-right: 4px solid transparent;
+  border-left:  4px solid transparent;
 }
 
 // The dropdown wrapper (div)

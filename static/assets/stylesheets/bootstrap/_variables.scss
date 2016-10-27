@@ -117,7 +117,7 @@ $component-active-color:    #fff !default;
 $component-active-bg:       $brand-primary !default;
 
 //** Width of the `border` for generating carets that indicate dropdowns.
-$caret-width-base:          4px !default;
+$caret-width-base:          6px !default;
 //** Carets increase slightly in size for larger components.
 $caret-width-large:         5px !default;
 
@@ -127,7 +127,7 @@ $caret-width-large:         5px !default;
 //## Customizes the `.table` component with basic values, each used across all table variations.
 
 //** Padding for `<th>`s and `<td>`s.
-$table-cell-padding:            8px !default;
+$table-cell-padding:            2px 0 !default;
 //** Padding for cells in `.table-condensed`.
 $table-condensed-cell-padding:  5px !default;
 
@@ -329,7 +329,7 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 //** Number of columns in the grid.
 $grid-columns:              12 !default;
 //** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         30px !default;
+$grid-gutter-width:         40px !default;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint:     $screen-sm-min !default;
@@ -424,8 +424,8 @@ $navbar-inverse-toggle-border-color:        #333 !default;
 //##
 
 //=== Shared nav styles
-$nav-link-padding:                          10px 15px !default;
-$nav-link-hover-bg:                         $gray-lighter !default;
+$nav-link-padding:                          10px 20px !default;
+$nav-link-hover-bg:                         #fff !default;
 
 $nav-disabled-link-color:                   $gray-light !default;
 $nav-disabled-link-hover-color:             $gray-light !default;
@@ -811,8 +811,8 @@ $breadcrumb-separator:          "/" !default;
 $carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6) !default;
 
 $carousel-control-color:                      #fff !default;
-$carousel-control-width:                      9% !default;
-$carousel-control-opacity:                    .5 !default;
+$carousel-control-width:                     	40px !default;
+$carousel-control-opacity:                    1 !default;
 $carousel-control-font-size:                  20px !default;
 
 $carousel-indicator-active-bg:                #fff !default;
